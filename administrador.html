@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Papel & Tinta - Administrador</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="Gemini_Generated_Image_c80dywc80dywc80d.jpg" alt="Logo">
+      <h1>Papel & Tinta</h1>
+    </div>
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <span class="role-badge">Rol: Administrador</span>
+      <button onclick="window.location.href='index.html'" class="btn-logout">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel-card">
+      <h2 style="color: #004687; margin-bottom: 15px;">Agregar Nuevo Producto</h2>
+      <form id="formAgregar" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+        <div class="form-group">
+          <label>Nombre del Producto:</label>
+          <input type="text" id="nombre" required>
+        </div>
+        <div class="form-group">
+          <label>Precio ($):</label>
+          <input type="number" id="precio" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label>Stock (Piezas):</label>
+          <input type="number" id="stock" required>
+        </div>
+        <div class="form-group" style="grid-column: 1 / -1;">
+          <button type="submit" class="btn-primary">Guardar Producto</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel-card">
+      <h2>Inventario Completo</h2>
+      <div class="filters-bar" style="margin-bottom: 15px;">
+        <button onclick="mostrarTodo()" class="btn-secondary">Mostrar Todos</button>
+        <button onclick="mostrarBajoStock()" class="btn-primary">Bajo Stock (< 10)</button>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+          <tbody id="inventario"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

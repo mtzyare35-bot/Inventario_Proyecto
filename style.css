@@ -1,0 +1,157 @@
+:root {
+  --color-blanco: #ffffff;
+  --color-azul: #004687;
+  --color-celeste: #eef7ff;
+  --color-celeste-fuerte: #0dcaf5;
+  --color-naranja: #fd7e14;
+  --color-naranja-hover: #e06d0e;
+  --color-texto: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--color-celeste);
+  color: var(--color-texto);
+  min-height: 100vh;
+}
+
+/* Header / Navbar */
+header {
+  background-color: var(--color-azul);
+  color: var(--color-blanco);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  height: 45px;
+  background-color: white;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.brand h1 {
+  font-size: 1.5rem;
+}
+
+.role-badge {
+  background-color: var(--color-naranja);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: var(--color-naranja);
+  color: var(--color-blanco);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-naranja-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-azul);
+  color: var(--color-blanco);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-logout {
+  background-color: transparent;
+  border: 1px solid var(--color-blanco);
+  color: var(--color-blanco);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Contenedores */
+main {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.panel-card {
+  background-color: var(--color-blanco);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+/* Tablas */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: var(--color-blanco);
+}
+
+th {
+  background-color: var(--color-azul);
+  color: var(--color-blanco);
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fbfd;
+}
+
+/* Formularios y Filtros */
+.filters-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}

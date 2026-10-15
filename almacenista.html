@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Papel & Tinta - Almacenista</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="Gemini_Generated_Image_c80dywc80dywc80d.jpg" alt="Logo">
+      <h1>Papel & Tinta</h1>
+    </div>
+    <div style="display: flex; gap: 15px; align-items: center;">
+      <span class="role-badge">Rol: Almacenista</span>
+      <button onclick="window.location.href='index.html'" class="btn-logout">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel-card">
+      <h2>Control de Stock / Almacén</h2>
+      <div class="filters-bar" style="margin-top: 15px;">
+        <button onclick="mostrarTodo()" class="btn-secondary">Mostrar Todos</button>
+        <button onclick="mostrarBajoStock()" class="btn-primary">Stock < 10</button>
+        <button onclick="mostrarStockMayor20()" class="btn-primary">Stock > 20</button>
+      </div>
+    </section>
+
+    <section class="panel-card">
+      <div id="productos" style="margin-top: 10px;"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      mostrarTodo();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Papel & Tinta - Iniciar Sesión</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-image: url('Gemini_Generated_Image_c80dywc80dywc80d.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      color: #004687;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    select, input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background-color: #fd7e14;
+      color: #ffffff;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+      background-color: #e06d0e;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Acceso al Sistema</h2>
+    
+    <div class="form-group">
+      <label for="roleSelect">Selecciona tu Rol:</label>
+      <select id="roleSelect">
+        <option value="">-- Seleccionar --</option>
+        <option value="administrador">Administrador</option>
+        <option value="almacenista">Almacenista</option>
+        <option value="cliente">Cliente</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Contraseña:</label>
+      <input type="password" value="12345">
+    </div>
+
+    <button type="button" class="btn-primary" onclick="ingresarSistema()">Ingresar</button>
+  </div>
+
+  <script>
+    function ingresarSistema() {
+      const rol = document.getElementById('roleSelect').value;
+
+      if (rol === 'administrador') {
+        window.location.href = 'administrador.html';
+      } else if (rol === 'almacenista') {
+        window.location.href = 'almacenista.html';
+      } else if (rol === 'cliente') {
+        window.location.href = 'cliente.html';
+      } else {
+        alert('Por favor selecciona un rol del menú');
+      }
+    }
+  </script> <script src="script.js"></script>
+</body>
+</html>
